@@ -82,7 +82,7 @@ npm run httpMitmProxy
 
 **第一步**：  
 
-<img src="img/Chapter1/WinSetProxyS1.png" width="550px">  
+<img src="/doc/img/Chapter1/MacSetProxyS1.png" width="550px">  
 
 **第二步**：  
 

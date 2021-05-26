@@ -160,6 +160,9 @@ function createFakeCertificateByDomain(caKey, caCert, domain) {
     }]);
     cert.sign(caKey, forge.md.sha256.create());
 
+
+    //console.log(cert);
+
     return {
         key: keys.privateKey,
         cert: cert

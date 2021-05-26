@@ -1,15 +1,15 @@
 'use strict'
 /**
- *  通过HTTP MITM 代理修改HTML内容
+ *  通过HTTP MITM 代理修改HTML内容   这个只能代理http请求
  */
 const http = require('http');
 const url = require('url');
-const through = require('through2');
+const through = require('through2');  //用来处理 stream 的。。。  Node 自带的 stream API 不好用。
 const net = require('net');
 
 let httpMitmProxy = new http.Server();
 // 启动端口
-let port = 6789;
+let port = 16789;
 
 httpMitmProxy.listen(port, () => {
     console.log(`HTTP中间人代理启动成功，端口：${port}`);
@@ -17,6 +17,7 @@ httpMitmProxy.listen(port, () => {
 // 代理接收客户端的转发请求
 httpMitmProxy.on('request', (req, res) => {
 
+    console.log(123456);
     // 解析客户端请求
     var urlObject = url.parse(req.url);
     let options =  {
